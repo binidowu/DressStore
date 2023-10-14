@@ -3,6 +3,7 @@
 /**
  * Module dependencies.
  */
+// Importing necessary modules and configurations
 let configDB = require("./config/db");
 let app = require('./config/express');
 let debug = require('debug')('dressstore:server');
@@ -11,7 +12,7 @@ let http = require('http');
 /**
  * Get port from environment and store in Express.
  */
-
+// Setting the port for the server
 let port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -24,7 +25,6 @@ let server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);

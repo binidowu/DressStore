@@ -1,3 +1,4 @@
+// Importing necessary modules
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
@@ -6,14 +7,15 @@ let logger = require('morgan');
 
 let productRouter = require('../app/routes/products');
 
+// Initializing the Express application
 let app = express();
-
 
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Setting up the product routes for the application
 app.use('/', productRouter);
 
 // catch 404 and forward to error handler

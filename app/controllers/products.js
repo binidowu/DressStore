@@ -1,6 +1,6 @@
 let productModel = require("../models/products");
 
-// Function to get all products
+// Function to display welcome message
 module.exports.create = async (req, res) => {
     try {
         res.json({
