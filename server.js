@@ -18,7 +18,7 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
-
+var db = configDB();
 let server = http.createServer(app);
 
 /**

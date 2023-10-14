@@ -4,7 +4,7 @@ let router = express.Router();
 let productController = require("../controllers/products");
 
 /* GET users listing. */
-router.get('/', productController.welcomeMessage);
+router.get('/', productController.create);
 router.get('/products', productController.getAllProducts);
 router.get('/products/:id', productController.getProductById);
 router.post('/products', productController.addProduct);
